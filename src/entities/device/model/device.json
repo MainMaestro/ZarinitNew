@@ -1,0 +1,25 @@
+[
+  {
+    "id": "1",
+    "name": "Router 1",
+    "ip": "192.168.1.101",
+    "mac": "00:1A:2B:3C:4D:5E",
+    "speed": "1 Gbps",
+    "lastSeen": "2025-08-29T10:00:00Z",
+    "online": true,
+    "tags": ["Офис", "Дом"],
+    "firmware": "1.0.1.1",
+    "uptime": "12 дней 4 часа",
+    "cpuLoad": 80,
+    "memoryUsage": 40,
+    "downloadSpeed": "85.5 Мбит/с",
+    "uploadSpeed": "31.4 Мбит/с",
+    "simCards": [
+      { "operator": "МТС", "active": true, "connection": "LTE", "speed": "32.5 Мбит/с" },
+      { "operator": "Билайн", "active": true, "connection": "LTE", "speed": "32.5 Мбит/с" },
+      { "operator": "Теле2", "active": false, "connection": "LTE", "speed": "32.5 Мбит/с" },
+      { "operator": "Мегафон", "active": false, "connection": "LTE", "speed": "32.5 Мбит/с" }
+    ],
+    "availableTags": ["Офис", "Дом", "Этаж 2", "Этаж 3", "Склад", "Крыша", "Машина", "Машина 2"]
+  }
+]

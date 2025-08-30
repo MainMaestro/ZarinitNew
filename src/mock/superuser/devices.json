@@ -1,0 +1,229 @@
+{
+  "items": [
+    {
+      "name": "Zarinit 5g",
+      "ip": "192.168.1.101",
+      "mac": "00:1A:2B:3C:4D:5E",
+      "speed": "1 Гбит/с",
+      "lastSeen": "2 мин назад",
+      "online": true,
+      "tags": [
+        "Дом",
+        "Этаж 2"
+      ]
+    },
+    {
+      "name": "Router-X",
+      "ip": "192.168.1.102",
+      "mac": "00:1A:2B:3C:4D:5F",
+      "speed": "100 Мбит/с",
+      "lastSeen": "5 мин назад",
+      "online": false,
+      "tags": [
+        "Офис"
+      ]
+    },
+    {
+      "name": "NanoLink",
+      "ip": "192.168.1.103",
+      "mac": "00:1A:2B:3C:4D:60",
+      "speed": "1 Гбит/с",
+      "lastSeen": "только что",
+      "online": true,
+      "tags": [
+        "Склад"
+      ]
+    },
+    {
+      "name": "Zarinit Mini",
+      "ip": "192.168.1.104",
+      "mac": "00:1A:2B:3C:4D:61",
+      "speed": "1 Гбит/с",
+      "lastSeen": "10 мин назад",
+      "online": true,
+      "tags": [
+        "Этаж 2",
+        "Важное"
+      ]
+    },
+    {
+      "name": "Office Router",
+      "ip": "192.168.1.105",
+      "mac": "00:1A:2B:3C:4D:62",
+      "speed": "100 Мбит/с",
+      "lastSeen": "1 час назад",
+      "online": false,
+      "tags": [
+        "Офис"
+      ]
+    },
+    {
+      "name": "SmartHub 3",
+      "ip": "192.168.1.106",
+      "mac": "00:1A:2B:3C:4D:63",
+      "speed": "1 Гбит/с",
+      "lastSeen": "3 мин назад",
+      "online": true,
+      "tags": [
+        "Дом"
+      ]
+    },
+    {
+      "name": "Zarinit Mesh",
+      "ip": "192.168.1.107",
+      "mac": "00:1A:2B:3C:4D:64",
+      "speed": "1 Гбит/с",
+      "lastSeen": "30 сек назад",
+      "online": true,
+      "tags": [
+        "Важное"
+      ]
+    },
+    {
+      "name": "Warehouse Node",
+      "ip": "192.168.1.108",
+      "mac": "00:1A:2B:3C:4D:65",
+      "speed": "100 Мбит/с",
+      "lastSeen": "5 сек назад",
+      "online": true,
+      "tags": [
+        "Склад"
+      ]
+    },
+    {
+      "name": "Domik Router",
+      "ip": "192.168.1.109",
+      "mac": "00:1A:2B:3C:4D:66",
+      "speed": "1 Гбит/с",
+      "lastSeen": "20 мин назад",
+      "online": false,
+      "tags": [
+        "Дом",
+        "Этаж 2"
+      ]
+    },
+    {
+      "name": "Basement AP",
+      "ip": "192.168.1.110",
+      "mac": "00:1A:2B:3C:4D:67",
+      "speed": "100 Мбит/с",
+      "lastSeen": "12 мин назад",
+      "online": true,
+      "tags": [
+        "Склад",
+        "Офис"
+      ]
+    },
+    {
+      "name": "Lab Switch",
+      "ip": "192.168.1.111",
+      "mac": "00:1A:2B:3C:4D:68",
+      "speed": "1 Гбит/с",
+      "lastSeen": "1 мин назад",
+      "online": true,
+      "tags": [
+        "Важное"
+      ]
+    },
+    {
+      "name": "Core Router",
+      "ip": "192.168.1.112",
+      "mac": "00:1A:2B:3C:4D:69",
+      "speed": "10 Гбит/с",
+      "lastSeen": "только что",
+      "online": true,
+      "tags": [
+        "Офис",
+        "Важное"
+      ]
+    },
+    {
+      "name": "Storage Node",
+      "ip": "192.168.1.113",
+      "mac": "00:1A:2B:3C:4D:6A",
+      "speed": "1 Гбит/с",
+      "lastSeen": "8 мин назад",
+      "online": false,
+      "tags": [
+        "Склад"
+      ]
+    },
+    {
+      "name": "Panel 23",
+      "ip": "192.168.1.114",
+      "mac": "00:1A:2B:3C:4D:6B",
+      "speed": "1 Гбит/с",
+      "lastSeen": "4 мин назад",
+      "online": true,
+      "tags": [
+        "Этаж 2"
+      ]
+    },
+    {
+      "name": "Printer Hub",
+      "ip": "192.168.1.115",
+      "mac": "00:1A:2B:3C:4D:6C",
+      "speed": "100 Мбит/с",
+      "lastSeen": "15 мин назад",
+      "online": true,
+      "tags": [
+        "Офис"
+      ]
+    },
+    {
+      "name": "Zarinit 5g",
+      "ip": "192.168.1.116",
+      "mac": "00:1A:2B:3C:4D:6D",
+      "speed": "1 Гбит/с",
+      "lastSeen": "1 мин назад",
+      "online": true,
+      "tags": [
+        "Дом"
+      ]
+    },
+    {
+      "name": "Roof Node",
+      "ip": "192.168.1.117",
+      "mac": "00:1A:2B:3C:4D:6E",
+      "speed": "1 Гбит/с",
+      "lastSeen": "12 сек назад",
+      "online": true,
+      "tags": [
+        "Этаж 2"
+      ]
+    },
+    {
+      "name": "Edge AP",
+      "ip": "192.168.1.118",
+      "mac": "00:1A:2B:3C:4D:6F",
+      "speed": "1 Гбит/с",
+      "lastSeen": "45 сек назад",
+      "online": true,
+      "tags": [
+        "Склад"
+      ]
+    },
+    {
+      "name": "Repeater 7",
+      "ip": "192.168.1.119",
+      "mac": "00:1A:2B:3C:4D:70",
+      "speed": "100 Мбит/с",
+      "lastSeen": "3 мин назад",
+      "online": false,
+      "tags": [
+        "Дом"
+      ]
+    },
+    {
+      "name": "Backup Router",
+      "ip": "192.168.1.120",
+      "mac": "00:1A:2B:3C:4D:71",
+      "speed": "1 Гбит/с",
+      "lastSeen": "7 мин назад",
+      "online": true,
+      "tags": [
+        "Важное"
+      ]
+    }
+  ]
+}
