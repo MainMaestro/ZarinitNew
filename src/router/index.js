@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import SuperUserPage from "@/pages/superuser/ui/SuperUserPage.vue";
 import DevicePage from "@/pages/device/ui/DevicePage.vue";
+import AuthDemo from "@/pages/AuthDemo.vue";
 
 const routes = [
   {
@@ -17,6 +18,11 @@ const routes = [
     name: "DevicePage",
     component: DevicePage,
     props: true,
+  },
+  {
+    path: "/auth-demo",
+    name: "AuthDemo",
+    component: AuthDemo,
   },
 ];
 

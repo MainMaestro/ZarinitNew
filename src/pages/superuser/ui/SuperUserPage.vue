@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup >
 import DeviceManagementPanel from "@/widgets/device-management-panel/ui/DeviceManagementPanel.vue";
 import Header from "@/components/HomeHeader.vue";
 </script>

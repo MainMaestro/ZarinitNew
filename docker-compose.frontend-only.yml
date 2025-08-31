@@ -1,0 +1,14 @@
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx-frontend-only.conf:/etc/nginx/nginx.conf:ro
+      - ./dist:/usr/share/nginx/html
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

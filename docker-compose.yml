@@ -1,0 +1,72 @@
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./dist:/usr/share/nginx/html
+    depends_on:
+      - auth-backend
+    networks:
+      - app-network
+
+# frontend контейнер больше не нужен, так как статические файлы уже собраны в dist/
+  # frontend:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   expose:
+  #     - "80"
+  #   networks:
+  #     - app-network
+  #   environment:
+  #     - NODE_ENV=production
+
+  auth-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.auth
+    expose:
+      - "5001"
+    environment:
+      - FLASK_ENV=production
+      - DATABASE_URL=postgresql+psycopg2://postgres:1@auth-db:5432/adminka
+      - SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://postgres:1@auth-db:5432/adminka
+      - POSTGRES_DB=adminka
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1
+      - ROOT_USER_EMAIL=root@admin.com
+      - ROOT_USER_PASSWORD=admin123
+      - SECRET_KEY=your-production-secret-key-change-this
+    volumes:
+      - /home/armen/Документы/cloud-auth:/cloud-auth
+    depends_on:
+      auth-db:
+        condition: service_healthy
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  auth-db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=adminka
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d adminka"]
+      interval: 3s
+      timeout: 5s
+      retries: 20
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

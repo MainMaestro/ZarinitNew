@@ -1,0 +1,71 @@
+services:
+  # Nginx reverse proxy для объединения сервисов на одном домене
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "${NGINX_PORT:-80}:80"
+    volumes:
+      - ./nginx-proxy.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - frontend
+      - auth-backend
+    networks:
+      - app-network
+
+  # Frontend приложение (ZarinitNew) - dev режим
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - "8080"
+    networks:
+      - app-network
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+
+  # Backend аутентификации (Cloud-Auth) - dev режим
+  auth-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.auth
+    expose:
+      - "5001"
+    environment:
+      - FLASK_ENV=development
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@auth-db:5432/${POSTGRES_DB}
+      - ROOT_USER_EMAIL=${ROOT_USER_EMAIL}
+      - ROOT_USER_PASSWORD=${ROOT_USER_PASSWORD}
+      - SECRET_KEY=${SECRET_KEY}
+    depends_on:
+      auth-db:
+        condition: service_started
+    networks:
+      - app-network
+    volumes:
+      - /home/armen/Документы/cloud-auth:/cloud-auth
+    restart: unless-stopped
+
+  # База данных для аутентификации
+  auth-db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data_dev:/var/lib/postgresql/data
+    networks:
+      - app-network
+    ports:
+      - "${DB_PORT:-5432}:5432"
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data_dev:

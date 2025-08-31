@@ -1,5 +1,5 @@
-<script setup lang="ts">
-
+<script setup >
+import { onMounted } from 'vue'
 import { useAuth } from '@/composables/useAuth.js'
 
 const { 
@@ -11,6 +11,11 @@ const {
   login,
   logout
 } = useAuth()
+
+// Проверяем авторизацию при загрузке компонента
+onMounted(() => {
+  checkAuth()
+})
 </script>
 
 <template>
@@ -21,7 +26,7 @@ const {
         <span class="font-bold text-lg">Устройства</span>
       </div>
       <div>
-        <span>Добро пожайловать {{ userInfo.username }}!</span>
+        <span>Добро пожайловать {{ userInfo?.username }}!</span>
       </div>
     </div>
   </header>
