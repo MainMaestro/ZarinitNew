@@ -10,7 +10,7 @@ export function useAuth() {
   const checkAuth = async () => {
     loading.value = true
     try {
-      const response = await fetch('/api/check-auth', {
+      const response = await fetch('/auth/api/check-auth', {
         credentials: 'include'
       })
       
@@ -132,7 +132,7 @@ export function useAuth() {
   // Проверка группы с паролем
   const checkGroupPassword = async (groupName, password) => {
     try {
-      const response = await fetch('/api/check-group', {
+      const response = await fetch('/auth/api/check-group', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -140,7 +140,7 @@ export function useAuth() {
         credentials: 'include',
         body: JSON.stringify({
           group_name: groupName,
-          password: password
+          password_phrase: password
         })
       })
       
@@ -161,7 +161,7 @@ export function useAuth() {
   // Генерация пароля для группы (только для админов)
   const generateGroupPassword = async (groupName) => {
     try {
-      const response = await fetch('/api/generate-password', {
+      const response = await fetch('/auth/api/generate-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
