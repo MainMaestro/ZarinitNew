@@ -42,7 +42,7 @@ const router = createRouter({
     
 //     // Если пользователь не авторизован, перенаправляем на страницу входа
 //     if (!isAuthenticated.value) {
-//       window.location.href = '/auth/login'
+//       window.location.href = 'localhost/auth/login'
 //       return
 //     }
     
@@ -51,7 +51,7 @@ const router = createRouter({
 //   } catch (error) {
 //     console.error('Ошибка проверки авторизации:', error)
 //     // В случае ошибки тоже перенаправляем на вход
-//     window.location.href = '/auth/login'
+//     window.location.href = 'localhost/auth/login'
 //   }
 // })
 
