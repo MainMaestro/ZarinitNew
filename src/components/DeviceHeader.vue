@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { useRoute } from "vue-router";
 import { computed, onMounted } from "vue";
 import { useDevicesStore } from "@/entities/device/model/deviceStore";
